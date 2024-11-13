@@ -1,0 +1,32 @@
+
+<app-add-user></app-add-user>
+<div class="container">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>first Name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Actions</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList">
+                <td>{{user.id}}</td>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.country}}</td>
+                <td><button type="button" class="btn btn-danger"  (click)="deleteUserById(user.id)">Delete</button></td>
+                <td><button type="button" class="btn btn-danger"  (click)="edit(user)">Edit</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
